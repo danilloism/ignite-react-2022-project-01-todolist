@@ -1,12 +1,13 @@
 import './global.css';
 import styles from './App.module.css';
 import { Header } from './components/Header/Header';
+import { Content } from './components/Content/Content';
 
 function App() {
   return (
-    <div>
+    <div className={styles.app}>
       <Header />
-      <div className={styles.content}>Conteúdo</div>
+      <Content />
     </div>
   );
 }

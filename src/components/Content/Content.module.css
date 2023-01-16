@@ -1,0 +1,37 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(100vw - 20px);
+    width: 100%;
+    align-self: center;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 700;
+    font-size: 0.875rem;
+}
+
+.info>div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.info>div:first-child {
+    color: var(--blue);
+}
+
+.info>div:last-child {
+    color: var(--purple);
+}
+
+.infoNumber {
+    border-radius: 999px;
+    color: var(--gray-200);
+    background: var(--gray-400);
+    font-size: 0.75rem;
+    padding: 2px 8px;
+}

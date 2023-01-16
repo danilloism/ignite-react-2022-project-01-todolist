@@ -1,3 +1,4 @@
-.content {
-    display: grid;
+.app {
+    display: flex;
+    flex-direction: column;
 }
