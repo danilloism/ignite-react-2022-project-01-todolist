@@ -5,6 +5,35 @@
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
 
+    width: 100%;
     display: flex;
     gap: 0.5rem;
+    height: 3.375rem;
+}
+
+.form input {
+    flex-grow: 1;
+}
+
+.form button {
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 1rem;
+    width: 5.625rem;
+}
+
+form button>span {
+    padding-right: 0.5rem;
+}
+
+.inputError[type="text"],
+.inputError[type="text"]:focus {
+    border-color: var(--danger);
+}
+
+@media (max-width: 768px) {
+
+    form button>span {
+        padding-right: 0.3rem;
+    }
 }

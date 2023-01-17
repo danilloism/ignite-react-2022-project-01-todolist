@@ -2,3 +2,30 @@
     display: flex;
     flex-direction: column;
 }
+
+.app footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.1rem 0.4rem;
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body,
+    input,
+    textarea,
+    button {
+        font-size: 83.5%;
+        line-height: 100%;
+    }
+
+    .app footer {
+        background: var(--gray-600);
+    }
+}

@@ -1,0 +1,82 @@
+.card {
+    width: 100%;
+    background-color: var(--gray-500);
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray-500);
+    height: 4.5rem;
+    padding: 1rem;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+
+.label {
+    display: flex;
+    /* align-items: center; */
+    align-items: flex-start;
+    gap: 1rem;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.label p {
+    width: 90%;
+}
+
+.checkbox {
+    /* box-sizing: border-box; */
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    margin-top: 0.25rem;
+
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.checkbox img {
+    width: 75%;
+}
+
+.unchecked {
+    border: 2px solid var(--blue);
+}
+
+.unchecked:hover {
+    border-color: var(--blue-dark);
+    background-color: var(--translucent-blue-dark);
+}
+
+.checked {
+    border: none;
+    background-color: var(--purple-dark);
+}
+
+.checked:hover {
+    background-color: var(--purple);
+}
+
+.checkedText {
+    text-decoration: line-through;
+}
+
+.trashIconButton {
+    background-color: transparent;
+    padding: 0.4rem;
+    border-radius: 4px;
+    display: flex;
+}
+
+.trashIconButton:hover {
+    background-color: var(--gray-400);
+
+}
+
+.trashIconButton:hover svg {
+    fill: var(--danger);
+}

@@ -17,10 +17,26 @@ export function Content() {
     setTarefas([...tarefas, tarefa]);
   }
 
+  function handleSetConcluido(tarefaId: string) {
+    const tarefa = tarefas.find(tarefa => tarefa.id == tarefaId);
+    if (tarefa) {
+      tarefa.concluido = !tarefa.concluido;
+
+      setTarefas([...tarefas]);
+    }
+  }
+
+  function handleDelete(tarefaId: string) {
+    const index = tarefas.findIndex(tarefa => tarefa.id == tarefaId);
+
+    tarefas.splice(index, 1);
+    setTarefas([...tarefas]);
+  }
+
   return (
     <div className={styles.content}>
       <Form onAddTarefa={handleAddTarefa} />
-      <div className={styles.info}>
+      <section className={styles.info}>
         <div>
           <span>Tarefas criadas</span>
           <span className={styles.infoNumber}>{tarefas.length}</span>
@@ -31,10 +47,13 @@ export function Content() {
             {numTarefasConcluidas} de {tarefas.length}
           </span>
         </div>
-      </div>
+      </section>
 
-      <ContentList tarefas={tarefas} />
-      <main></main>
+      <ContentList
+        tarefas={tarefas}
+        toggleConcluido={handleSetConcluido}
+        onDeleteTarefa={handleDelete}
+      />
     </div>
   );
 }

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: calc(100vw - 20px);
+    max-width: calc(100vw - 50vw);
     width: 100%;
     align-self: center;
 }
@@ -13,11 +13,13 @@
     width: 100%;
     font-weight: 700;
     font-size: 0.875rem;
+    line-height: initial;
 }
 
 .info>div {
     display: flex;
     gap: 0.5rem;
+
 }
 
 .info>div:first-child {
@@ -29,9 +31,15 @@
 }
 
 .infoNumber {
-    border-radius: 999px;
+    border-radius: 50px;
     color: var(--gray-200);
     background: var(--gray-400);
     font-size: 0.75rem;
-    padding: 2px 8px;
+    padding: 0.125rem 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .content {
+        max-width: calc(100vw - 6%);
+    }
 }
